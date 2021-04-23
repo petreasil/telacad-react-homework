@@ -3,3 +3,4 @@
 [ ] Refactorizam codul prea complex
 [ ] Folosim const acolo unde se poate
 [ ] Fromat cod cu plugin Prettier
+
