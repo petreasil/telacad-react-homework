@@ -1,10 +1,13 @@
 import axios from 'axios';
+import { plainToClass } from 'class-transformer';
+import { ProductModel } from '../../models/product.model';
 
 export const getProducts = () => async dispatch => {
     const res = await axios.get('https://fakestoreapi.com/products');
+    const payload = plainToClass(ProductModel, res.data);
     dispatch({
         type: 'GET_PRODUCTS',
-        payload: res.data
+        payload
     });
 };
 
